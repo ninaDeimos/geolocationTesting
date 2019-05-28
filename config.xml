@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget defaultlocale="en-US" id="geolocationdebug" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps">
+    <name>Geolocation Debug</name>
+    <description>App for debugging the geolocation functionality</description>
+    <author email="" href="" />
+    <content src="index.html" />
+    <access origin="*" />
+    <vs:features />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="windows-target-version" value="10.0" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="comgooglemaps:*" />
+    <allow-intent href="mobileecho:*" />
+    <allow-navigation href="*" />
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <platform name="ios">
+        <icon height="167" src="res/ios/icon/icon-83.5@2x.png" width="167" />
+        <icon height="180" src="res/ios/icon/icon-60@3x.png" width="180" />
+        <icon height="60" src="res/ios/icon/icon-60.png" width="60" />
+        <icon height="120" src="res/ios/icon/icon-60@2x.png" width="120" />
+        <icon height="76" src="res/ios/icon/icon-76.png" width="76" />
+        <icon height="152" src="res/ios/icon/icon-76@2x.png" width="152" />
+        <icon height="40" src="res/ios/icon/icon-40.png" width="40" />
+        <icon height="80" src="res/ios/icon/icon-40@2x.png" width="80" />
+        <icon height="72" src="res/ios/icon/icon-72.png" width="72" />
+        <icon height="144" src="res/ios/icon/icon-72@2x.png" width="144" />
+        <icon height="29" src="res/ios/icon/icon-small.png" width="29" />
+        <icon height="58" src="res/ios/icon/icon-small@2x.png" width="58" />
+        <icon height="50" src="res/ios/icon/icon-50.png" width="50" />
+        <icon height="100" src="res/ios/icon/icon-50@2x.png" width="100" />
+    </platform>
+    <platform name="ios">
+        <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+            <string>
+            </string>
+        </edit-config>
+    </platform>
+    <platform name="windows">
+        <splash height="300" src="res/screens/windows/SplashScreen.scale-100.png" width="620" />
+        <splash height="1920" src="res/screens/windows/SplashScreen.scale-240.png" width="1152" />
+        <splash height="1920" src="res/screens/windows/SplashScreenPhone.scale-240.png" width="1152" />
+    </platform>
+    <platform name="wp8">
+        <splash height="800" src="res/screens/wp8/SplashScreenImage.jpg" width="480" />
+    </platform>
+    <platform name="ios">
+        <preference name="Orientation" value="all" />
+        <config-file parent="LSApplicationQueriesSchemes" platform="ios" target="*-Info.plist">
+            <array>
+                <string>comgooglemaps</string>
+                <string>tomtomhome</string>
+                <string>here-route</string>
+                <string>ms-drive-to</string>
+                <string>appconnect</string>
+                <string>mobileecho</string>
+            </array>
+        </config-file>
+    </platform>
+    <preference name="KeepRunning" value="True" />
+    <preference name="ShowTitle" value="True" />
+    <preference name="InAppBrowserStorageEnabled" value="True" />
+    <preference name="SuppressesIncrementalRendering" value="True" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <plugin name="cordova-plugin-geolocation" spec="4.0.1" />
+    <engine name="ios" spec="5.0.1" />
+</widget>

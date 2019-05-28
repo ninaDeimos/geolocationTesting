@@ -1,0 +1,17 @@
+<ion-content>
+
+  <h1>TESTAPP Geolocation Plugin</h1>
+  <button ion-button (click)="getCurrentPosition()">
+    Get Current Position
+  </button>
+  <div style="padding: 10px;overflow: scroll; -webkit-overflow-scrolling: touch; user-select: text; -webkit-user-select: text" id="text">
+      <ion-item *ngFor="let position of log.slice().reverse()">
+          {{position.gpsStartTimestamp}} - {{position.gpsTimestamp}} - {{position.coords.longitude}} / {{position.coords.latitude}}
+      </ion-item>
+  </div>
+  <div style="padding: 10px;overflow: scroll; -webkit-overflow-scrolling: touch; user-select: text; -webkit-user-select: text" id="text2">
+    <ion-item *ngFor="let position of manualLog.slice().reverse()">
+        {{position.gpsStartTimestamp}} - {{position.gpsTimestamp}} - {{position.coords.longitude}} / {{position.coords.latitude}}
+    </ion-item>
+</div>
+</ion-content>
